@@ -15,6 +15,8 @@ const config: Config = {
         grayTextColor: "rgba(255,255,255,.5)",
         yellowColor: "#FFE8A1",
         sideBorderColor: "#3749bb",
+        cartBgColor: "#081621",
+        cartBgHoverColor: "#3749bb",
       },
     },
   },

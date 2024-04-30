@@ -1,9 +1,11 @@
+"use client";
 import { heroImage, sideHeroImage } from "@/images";
+import { FaCartPlus } from "react-icons/fa";
 import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className=" flex items-center justify-center w-full ">
+    <div className=" flex items-center justify-center w-full relative">
       <div className=" mx-auto  mt-6 flex justify-between gap-x-8">
         <div>
           <Image
@@ -32,7 +34,7 @@ const Banner = () => {
                 placeholder="Search and Select Product"
                 className="  flex-1 px-3 py-2 outline-none rounded-sm "
               />
-              <button className=" mb-4 text-sm font-semibold px-3 py-1 w-[87%] border-2 border-purpoleColor mt-3 rounded-sm text-purpoleColor">
+              <button className=" mb-4 text-sm font-semibold px-3 py-2 w-[87%] border-2 border-sideBorderColor mt-3 rounded-sm text-sideBorderColor hover:bg-sideBorderColor hover:text-white duration-700">
                 View Comparison
               </button>
             </div>
@@ -47,6 +49,25 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      {/* cart work start */}
+
+      <div className=" absolute z-40 cursor-pointer ">
+        <div className=" fixed right-10 bottom-12">
+          <div className=" bg-cartBgColor hover:bg-cartBgHoverColor duration-300 border-[1px]  border-slate-500 px-4 py-2 rounded-sm flex  relative">
+            <div>
+              <FaCartPlus className=" text-white text-2xl" />
+              <p className=" text-[10px] text-white font-semibold mt-1">CART</p>
+            </div>
+
+            <div className=" absolute -right-2 -top-2">
+              <div className=" text-white text-center text-[11px] bg-orangeColor rounded-full px-2 py-1">
+                <p>0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* cart work end */}
     </div>
   );
 };

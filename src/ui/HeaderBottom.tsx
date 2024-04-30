@@ -27,7 +27,7 @@ const HeaderBottom = () => {
     { title: "Appliance", href: "/appliance" },
   ];
   return (
-    <div className=" h-12 flex items-center justify-center px-5 border border-b shadow-md ">
+    <div className=" sticky top-0 z-50 bg-white h-12 flex items-center justify-center px-5 border border-b shadow-md ">
       {navigation.map(({ title, href }) => (
         <Link
           key={title}
